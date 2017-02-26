@@ -1,0 +1,100 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "ao_intensity": 0.75,
+                "emissive_intensity": 3.9800000190734863,
+                "height_force": 1.5199999809265137,
+                "nbSamples": 64
+            },
+            "shader": "pbr-metal-rough-with-alpha-blending"
+        },
+        "Main shader (Copy)": {
+            "parameters": {
+                "alpha_threshold": 0.33000001311302185,
+                "ao_intensity": 0.75,
+                "emissive_intensity": 1,
+                "height_force": 1,
+                "nbSamples": 16
+            },
+            "shader": "pbr-metal-rough-with-alpha-test"
+        }
+    },
+    "texturesets": {
+        "Antifas": {
+            "shader": "Main shader"
+        },
+        "BOAT_LINES": {
+            "shader": "Main shader"
+        },
+        "Blinn": {
+            "shader": "Main shader"
+        },
+        "Dientes_Inf": {
+            "shader": "Main shader"
+        },
+        "Eyes_Lines": {
+            "shader": "Main shader"
+        },
+        "Hair_Lines": {
+            "shader": "Main shader"
+        },
+        "Madera_mastil": {
+            "shader": "Main shader"
+        },
+        "PELO_1": {
+            "shader": "Main shader"
+        },
+        "PELO_MARRON_1": {
+            "shader": "Main shader"
+        },
+        "PELO_MARRON_3": {
+            "shader": "Main shader"
+        },
+        "PESTAMIAS": {
+            "shader": "Main shader"
+        },
+        "Piel_rostro2": {
+            "shader": "Main shader"
+        },
+        "PreviewMaterial": {
+            "shader": "Main shader"
+        },
+        "ROPES": {
+            "shader": "Main shader"
+        },
+        "Scene_Material": {
+            "shader": "Main shader"
+        },
+        "Scene_Material2": {
+            "shader": "Main shader"
+        },
+        "TRAJE_SEDA": {
+            "shader": "Main shader"
+        },
+        "lineas": {
+            "shader": "Main shader"
+        },
+        "madera_A": {
+            "shader": "Main shader"
+        },
+        "madera_B": {
+            "shader": "Main shader"
+        },
+        "ojos": {
+            "shader": "Main shader"
+        },
+        "ojos1": {
+            "shader": "Main shader"
+        },
+        "tongue2": {
+            "shader": "Main shader"
+        },
+        "velas_3": {
+            "shader": "Main shader"
+        }
+    }
+}
