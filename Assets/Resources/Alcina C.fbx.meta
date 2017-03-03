@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6e03f2df5edfe974081c35611bcef73d
-timeCreated: 1488524724
+timeCreated: 1488530476
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -578,7 +578,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ALCINA_JULLIARD:L_Pinky_00
+    - boneName: ALCINA_JULLIARD:L_Pinky_01
       humanName: Left Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -586,7 +586,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ALCINA_JULLIARD:L_Pinky_01
+    - boneName: ALCINA_JULLIARD:L_Pinky_02
       humanName: Left Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -594,7 +594,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ALCINA_JULLIARD:L_Pinky_02
+    - boneName: ALCINA_JULLIARD:L_Pinky_03
       humanName: Left Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -698,7 +698,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ALCINA_JULLIARD:R_Pinky_00
+    - boneName: ALCINA_JULLIARD:R_Pinky_01
       humanName: Right Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -706,7 +706,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ALCINA_JULLIARD:R_Pinky_01
+    - boneName: ALCINA_JULLIARD:R_Pinky_02
       humanName: Right Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -714,7 +714,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ALCINA_JULLIARD:R_Pinky_02
+    - boneName: ALCINA_JULLIARD:R_Pinky_03
       humanName: Right Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}

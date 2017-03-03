@@ -109,6 +109,16 @@ public class AvatarController : MonoBehaviour
 	private bool bLeftFistDone = false;
 	private bool bRightFistDone = false;
 
+	[Range(0, 60f)]
+	public float handOpenAngle = 0f;
+	[Range(0, 180f)]
+	public float handCloseAngle = 60f;
+
+	private bool leftFistClosed = false;
+	private bool rightFistClosed = false;
+	private float leftFistAngle = 0f;
+	private float rightFistAngle = 0f;
+
 	// grounder constants and variables
 	private const int raycastLayers = ~2;  // Ignore Raycast
 	private const float maxFootDistanceGround = 0.02f;  // maximum distance from lower foot to the ground
@@ -557,45 +567,74 @@ public class AvatarController : MonoBehaviour
 		// check for hand grips
 		if (joint == (int)KinectInterop.JointType.HandTipLeft || joint == (int)KinectInterop.JointType.ThumbLeft)
 		{
+			//if (lastLeftHandEvent == InteractionManager.HandEventType.Grip)
+			//{
+			//	if (!bLeftFistDone)
+			//	{
+			//		float angleSign = !mirroredMovement /**(boneIndex == 27 || boneIndex == 29)*/ ? -1f : -1f;
+			//		float angleRot = angleSign * 60f;
+
+			//		TransformSpecialBoneFist(boneIndex, angleRot);
+			//		bLeftFistDone = (boneIndex >= 29);
+			//	}
+
+			//	return;
+			//}
+			//else if (bLeftFistDone && lastLeftHandEvent == InteractionManager.HandEventType.Release)
+			//{
+			//	TransformSpecialBoneUnfist(boneIndex);
+			//	bLeftFistDone = !(boneIndex >= 29);
+			//}
 			if (lastLeftHandEvent == InteractionManager.HandEventType.Grip)
 			{
-				if (!bLeftFistDone)
-				{
-					float angleSign = !mirroredMovement /**(boneIndex == 27 || boneIndex == 29)*/ ? -1f : -1f;
-					float angleRot = angleSign * 60f;
-
-					TransformSpecialBoneFist(boneIndex, angleRot);
-					bLeftFistDone = (boneIndex >= 29);
-				}
-
-				return;
+				leftFistClosed = true;
 			}
-			else if (bLeftFistDone && lastLeftHandEvent == InteractionManager.HandEventType.Release)
+			else if (lastLeftHandEvent == InteractionManager.HandEventType.Release)
 			{
-				TransformSpecialBoneUnfist(boneIndex);
-				bLeftFistDone = !(boneIndex >= 29);
+				leftFistClosed = false;
 			}
+
+			float angleSign = !mirroredMovement /**(boneIndex == 27 || boneIndex == 29)*/ ? -1f : -1f;
+			leftFistAngle = Mathf.Lerp(leftFistAngle, leftFistClosed ? 60f : handOpenAngle, smoothFactor * Time.deltaTime);
+			float angleRot = angleSign * leftFistAngle;
+			TransformSpecialBoneFist(boneIndex, angleRot);
+			return;
 		}
 		else if (joint == (int)KinectInterop.JointType.HandTipRight || joint == (int)KinectInterop.JointType.ThumbRight)
 		{
+			//if (lastRightHandEvent == InteractionManager.HandEventType.Grip)
+			//{
+			//	if (!bRightFistDone)
+			//	{
+			//		float angleSign = !mirroredMovement /**(boneIndex == 27 || boneIndex == 29)*/ ? -1f : -1f;
+			//		float angleRot = angleSign * 60f;
+
+			//		TransformSpecialBoneFist(boneIndex, angleRot);
+			//		bRightFistDone = (boneIndex >= 29);
+			//	}
+
+			//	return;
+			//}
+			//else if (bRightFistDone && lastRightHandEvent == InteractionManager.HandEventType.Release)
+			//{
+			//	TransformSpecialBoneUnfist(boneIndex);
+			//	bRightFistDone = !(boneIndex >= 29);
+			//}
+
 			if (lastRightHandEvent == InteractionManager.HandEventType.Grip)
 			{
-				if (!bRightFistDone)
-				{
-					float angleSign = !mirroredMovement /**(boneIndex == 27 || boneIndex == 29)*/ ? -1f : -1f;
-					float angleRot = angleSign * 60f;
-
-					TransformSpecialBoneFist(boneIndex, angleRot);
-					bRightFistDone = (boneIndex >= 29);
-				}
-
-				return;
+				rightFistClosed = true;
 			}
-			else if (bRightFistDone && lastRightHandEvent == InteractionManager.HandEventType.Release)
+			else if (lastRightHandEvent == InteractionManager.HandEventType.Release)
 			{
-				TransformSpecialBoneUnfist(boneIndex);
-				bRightFistDone = !(boneIndex >= 29);
+				rightFistClosed = false;
 			}
+
+			float angleSign = !mirroredMovement /**(boneIndex == 27 || boneIndex == 29)*/ ? -1f : -1f;
+			rightFistAngle = Mathf.Lerp(rightFistAngle, rightFistClosed ? 60f : handOpenAngle, smoothFactor * Time.deltaTime);
+			float angleRot = angleSign * rightFistAngle;
+			TransformSpecialBoneFist(boneIndex, angleRot);
+			return;
 		}
 
 		// get the animator component
@@ -1166,16 +1205,16 @@ public class AvatarController : MonoBehaviour
 		{5, HumanBodyBones.LeftUpperArm},
 		{6, HumanBodyBones.LeftLowerArm},
 		{7, HumanBodyBones.LeftHand},
-		{8, HumanBodyBones.LeftIndexProximal},
-		{9, HumanBodyBones.LeftIndexIntermediate},
-		{10, HumanBodyBones.LeftThumbProximal},
+		//{8, HumanBodyBones.LeftIndexProximal},
+		//{9, HumanBodyBones.LeftIndexIntermediate},
+		//{10, HumanBodyBones.LeftThumbProximal},
 
 		{11, HumanBodyBones.RightUpperArm},
 		{12, HumanBodyBones.RightLowerArm},
 		{13, HumanBodyBones.RightHand},
-		{14, HumanBodyBones.RightIndexProximal},
-		{15, HumanBodyBones.RightIndexIntermediate},
-		{16, HumanBodyBones.RightThumbProximal},
+		//{14, HumanBodyBones.RightIndexProximal},
+		//{15, HumanBodyBones.RightIndexIntermediate},
+		//{16, HumanBodyBones.RightThumbProximal},
 
 		{17, HumanBodyBones.LeftUpperLeg},
 		{18, HumanBodyBones.LeftLowerLeg},
