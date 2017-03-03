@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6e03f2df5edfe974081c35611bcef73d
-timeCreated: 1486762541
+timeCreated: 1488524724
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -264,7 +264,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -297,8 +297,937 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-    human: []
-    skeleton: []
+    human:
+    - boneName: ALCINA_JULLIARD:Root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Hip_Top
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Hip_Top
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Knee_Top
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Knee_Top
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Ankle
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Ankle
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:spine_3
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:Spine_03
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:Neck1
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:head1
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Shoul_Top
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Shoulder_Top
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Shoulder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Shoulder
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Elbow
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Elbow
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Wrist
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Wrist
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Toe
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Toe
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:EYE_left
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:EYE_right
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Thumn_01
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Thumb_02
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Thumb_03
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Index_01
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Index_02
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Index_03
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Middle_01
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Middle_02
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Middle_03
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Ring_01
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Ring_02
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Ring_03
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Pinky_00
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Pinky_01
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:L_Pinky_02
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Thumn_01
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Thumb_02
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Thumb_03
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Index_01
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Index_02
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Index_03
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Middle_01
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Middle_02
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Middle_03
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Ring_01
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Ring_02
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Ring_03
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Pinky_00
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Pinky_01
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ALCINA_JULLIARD:R_Pinky_02
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Alcina C(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Alcina_Head
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Alcina_Torso
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Gown
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Gown_Lines
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:HAIR_LINES
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Head_Lines
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:PELO_MESH
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:PIERNAS_LOW
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Torso_Lines
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Root
+      parentName: Alcina C(Clone)
+      position: {x: -0, y: 0.100994386, z: -0.005253892}
+      rotation: {x: -0, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Pelvis
+      parentName: ALCINA_JULLIARD:Root
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.4993321, y: 0.50066704, z: -0.4993321, w: 0.5006671}
+      scale: {x: 1.0000074, y: 1.0000074, z: 1.0000072}
+    - name: ALCINA_JULLIARD:Spine_02
+      parentName: ALCINA_JULLIARD:Pelvis
+      position: {x: -0.003585854, y: -1.3905982e-21, z: -3.9810978e-19}
+      rotation: {x: 0.99995816, y: -0.0091557205, z: -0.000000059604645, w: 0}
+      scale: {x: 1.0000052, y: 1.000009, z: 1.0000069}
+    - name: ALCINA_JULLIARD:spine_3
+      parentName: ALCINA_JULLIARD:Spine_02
+      position: {x: -0.01476694, y: -8.881784e-18, z: 1.665076e-18}
+      rotation: {x: -0.000000029662324, y: 0.00000003007501, z: -0.002250087, w: 0.99999756}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000031}
+    - name: ALCINA_JULLIARD:Spine_03
+      parentName: ALCINA_JULLIARD:spine_3
+      position: {x: -0.014256209, y: 4.9966444e-17, z: 3.1797919e-18}
+      rotation: {x: 9.0145824e-10, y: -9.427354e-10, z: 0.030944545, w: 0.99952114}
+      scale: {x: 1.0000027, y: 1.0000027, z: 1.000003}
+    - name: ALCINA_JULLIARD:Spine_04
+      parentName: ALCINA_JULLIARD:Spine_03
+      position: {x: -0.0108985985, y: -0.0028034737, z: -7.094298e-18}
+      rotation: {x: -3.6721193e-10, y: 3.9109682e-10, z: -0.012728391, w: 0.99991906}
+      scale: {x: 1.0000011, y: 1.0000013, z: 1.0000023}
+    - name: ALCINA_JULLIARD:Neck1
+      parentName: ALCINA_JULLIARD:Spine_04
+      position: {x: -0.0033529478, y: 0.0011372047, z: -7.6150883e-19}
+      rotation: {x: -0.99628234, y: 0.0861483, z: 0.0000000025231375, w: -0.0000000026156477}
+      scale: {x: 1.0000107, y: 1.0000129, z: 1.0000114}
+    - name: ALCINA_JULLIARD:head1
+      parentName: ALCINA_JULLIARD:Neck1
+      position: {x: -0.0077186218, y: -0.00018444168, z: 5.135016e-13}
+      rotation: {x: 0.99543667, y: -0.095424525, z: -0.000000030734885, w: -0.00000003445216}
+      scale: {x: 1.0000087, y: 1.0000061, z: 1.0000074}
+    - name: ALCINA_JULLIARD:EYE_left
+      parentName: ALCINA_JULLIARD:head1
+      position: {x: -0.005203235, y: 0.008805268, z: 0.0028284357}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:EYES_LINES
+      parentName: ALCINA_JULLIARD:EYE_left
+      position: {x: -0.00000015161656, y: -0.0000022864965, z: -4.8219627e-14}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:IRIS
+      parentName: ALCINA_JULLIARD:EYE_left
+      position: {x: -0.00000015161656, y: -0.0000022864965, z: -4.8219607e-14}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:EYE_right
+      parentName: ALCINA_JULLIARD:head1
+      position: {x: -0.0052126395, y: 0.008615751, z: -0.0028069748}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:EYE_pupil_right
+      parentName: ALCINA_JULLIARD:EYE_right
+      position: {x: -0.0000001516181, y: -0.00000228652, z: -4.8220705e-14}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:EYES_LINES1
+      parentName: ALCINA_JULLIARD:EYE_right
+      position: {x: -0.0000001516181, y: -0.00000228652, z: -4.8220705e-14}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:Top_Head
+      parentName: ALCINA_JULLIARD:head1
+      position: {x: -0.015884163, y: -1.3543321e-16, z: 1.5018326e-16}
+      rotation: {x: -0.49749392, y: 0.5024936, z: 0.49749386, w: 0.50249356}
+      scale: {x: 1.0000039, y: 1.0000007, z: 1.0000029}
+    - name: ALCINA_JULLIARD:alcinas_boat
+      parentName: ALCINA_JULLIARD:Top_Head
+      position: {x: 0.0074765855, y: -0.1591397, z: -0.014480283}
+      rotation: {x: 0.023912996, y: 0.36764273, z: 0.03359136, w: 0.92905253}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:alcinas_boat_LINES
+      parentName: ALCINA_JULLIARD:Top_Head
+      position: {x: 0.0074765855, y: -0.1591397, z: -0.014480283}
+      rotation: {x: 0.023912996, y: 0.36764273, z: 0.03359136, w: 0.92905253}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ALCINA_JULLIARD:L_Clav
+      parentName: ALCINA_JULLIARD:Spine_03
+      position: {x: -0.008996424, y: -0.0014269971, z: 0.004074468}
+      rotation: {x: -0.53464615, y: 0.6018364, z: 0.41263542, w: 0.42623773}
+      scale: {x: 1.0000019, y: 1.0000011, z: 0.99999976}
+    - name: ALCINA_JULLIARD:L_Shoul_Top
+      parentName: ALCINA_JULLIARD:L_Clav
+      position: {x: -0.006215, y: 0.00014799999, z: -0.0044226823}
+      rotation: {x: 0.013921342, y: -0.1111163, z: -0.08802114, w: 0.9898039}
+      scale: {x: 1.0000006, y: 1, z: 1.0000001}
+    - name: ALCINA_JULLIARD:L_Shoulder
+      parentName: ALCINA_JULLIARD:L_Shoul_Top
+      position: {x: -0.0064052013, y: -0.0024145457, z: -0.00012835904}
+      rotation: {x: 0.0049427957, y: -0.0015779011, z: 0.017740386, w: 0.9998292}
+      scale: {x: 1.0000031, y: 0.99999803, z: 1.000001}
+    - name: ALCINA_JULLIARD:L_Elbow_Top
+      parentName: ALCINA_JULLIARD:L_Shoulder
+      position: {x: -0.017850922, y: -0.000942915, z: -0.000052618183}
+      rotation: {x: 0.0040416396, y: -0.09152257, z: 0.028203947, w: 0.99539536}
+      scale: {x: 0.9999993, y: 1.0000024, z: 0.99999976}
+    - name: ALCINA_JULLIARD:L_Elbow
+      parentName: ALCINA_JULLIARD:L_Elbow_Top
+      position: {x: -0.0040031727, y: -1.6456563e-17, z: 0.00038847933}
+      rotation: {x: 0.00013496156, y: 0.10804917, z: 0.0017583481, w: 0.9941441}
+      scale: {x: 1.0000006, y: 1.0000007, z: 1.0000014}
+    - name: ALCINA_JULLIARD:L_Wrist_top
+      parentName: ALCINA_JULLIARD:L_Elbow
+      position: {x: -0.020191077, y: 3.4580087e-17, z: -0.0007564908}
+      rotation: {x: -0, y: -0, z: 6.217247e-15, w: 1}
+      scale: {x: 0.9999997, y: 1.0000014, z: 0.9999988}
+    - name: ALCINA_JULLIARD:L_Wrist
+      parentName: ALCINA_JULLIARD:L_Wrist_top
+      position: {x: -0.0017437966, y: -1.4862785e-17, z: -4.440892e-18}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000006, y: 1.0000007, z: 1.0000011}
+    - name: ALCINA_JULLIARD:L_Hand
+      parentName: ALCINA_JULLIARD:L_Wrist
+      position: {x: -0.002865398, y: 0.0000124194, z: -0.00020718345}
+      rotation: {x: -0.016380595, y: 0.8474726, z: 0.0018352281, w: 0.5305832}
+      scale: {x: 1.0000106, y: 1.0000006, z: 1.0000136}
+    - name: ALCINA_JULLIARD:L_Thumn_01
+      parentName: ALCINA_JULLIARD:L_Hand
+      position: {x: -0.003311959, y: -0.0008641895, z: 0.0002148417}
+      rotation: {x: -0.25660098, y: -0.608286, z: -0.14350533, w: 0.7372587}
+      scale: {x: 1.0000042, y: 0.9999908, z: 1.0000075}
+    - name: ALCINA_JULLIARD:L_Thumb_02
+      parentName: ALCINA_JULLIARD:L_Thumn_01
+      position: {x: -0.0028390172, y: -2.8033118e-17, z: -1.0546316e-17}
+      rotation: {x: 0.00014181431, y: 0.0045144246, z: -0.00006216762, w: 0.99998987}
+      scale: {x: 1.0000027, y: 1.0000011, z: 1.0000004}
+    - name: ALCINA_JULLIARD:L_Thumb_03
+      parentName: ALCINA_JULLIARD:L_Thumb_02
+      position: {x: -0.0024631831, y: 1.4987715e-17, z: 3.7731083e-17}
+      rotation: {x: -0.00494986, y: -0.036054906, z: 0.0003239657, w: 0.99933755}
+      scale: {x: 1.0000029, y: 1.000001, z: 0.99999774}
+    - name: ALCINA_JULLIARD:L_Thumb_04
+      parentName: ALCINA_JULLIARD:L_Thumb_03
+      position: {x: -0.0024942965, y: -1.8737115e-18, z: 3.6355712e-19}
+      rotation: {x: -0.001987846, y: -0.058144588, z: 0.000115817355, w: 0.9983063}
+      scale: {x: 1.0000064, y: 1.0000031, z: 0.99999964}
+    - name: ALCINA_JULLIARD:L_Index_01
+      parentName: ALCINA_JULLIARD:L_Hand
+      position: {x: 0.00043611974, y: -0.00014344383, z: -0.00581144}
+      rotation: {x: -0.0076566665, y: -0.85488784, z: 0.013132768, w: 0.5185901}
+      scale: {x: 0.99999917, y: 1.0000024, z: 1.0000019}
+    - name: ALCINA_JULLIARD:L_Index_02
+      parentName: ALCINA_JULLIARD:L_Index_01
+      position: {x: -0.0030353956, y: 0.0000000041931574, z: 0.0000039540937}
+      rotation: {x: -0.0007785833, y: -0.022702925, z: 0.0000064359024, w: 0.999742}
+      scale: {x: 1.0000013, y: 1.0000001, z: 1.0000008}
+    - name: ALCINA_JULLIARD:L_Index_03
+      parentName: ALCINA_JULLIARD:L_Index_02
+      position: {x: -0.001981544, y: 0.0000000060385017, z: -0.000012147072}
+      rotation: {x: 0.0008716266, y: 0.025416953, z: -0.000009546624, w: 0.9996766}
+      scale: {x: 0.9999999, y: 1.0000018, z: 1.0000015}
+    - name: ALCINA_JULLIARD:L_Index_04
+      parentName: ALCINA_JULLIARD:L_Index_03
+      position: {x: -0.0018564897, y: -0.00000000388611, z: -0.0000031173279}
+      rotation: {x: -0.0006232021, y: -0.018172767, z: 0.00001133555, w: 0.9998347}
+      scale: {x: 1.0000019, y: 1.0000007, z: 1.0000012}
+    - name: ALCINA_JULLIARD:L_Middle_01
+      parentName: ALCINA_JULLIARD:L_Hand
+      position: {x: 0.0024034164, y: -0.00017299585, z: -0.0057105115}
+      rotation: {x: -0.007362218, y: -0.8624455, z: 0.01338992, w: 0.50591934}
+      scale: {x: 1.0000026, y: 1.0000004, z: 1.0000064}
+    - name: ALCINA_JULLIARD:L_Middle_02
+      parentName: ALCINA_JULLIARD:L_Middle_01
+      position: {x: -0.003123572, y: 5.1781493e-17, z: -1.11026705e-17}
+      rotation: {x: 0.000027720807, y: 0.0008086559, z: -0.0000010733489, w: 0.99999976}
+      scale: {x: 1.000001, y: 0.9999983, z: 0.9999994}
+    - name: ALCINA_JULLIARD:L_Middle_03
+      parentName: ALCINA_JULLIARD:L_Middle_02
+      position: {x: -0.0022542775, y: 2.342745e-17, z: 1.1179772e-18}
+      rotation: {x: -0.0010061951, y: -0.029346975, z: 0.0000135482705, w: 0.9995688}
+      scale: {x: 1, y: 1.0000008, z: 1}
+    - name: ALCINA_JULLIARD:L_Middle_04
+      parentName: ALCINA_JULLIARD:L_Middle_03
+      position: {x: -0.0020272443, y: 3.1042874e-17, z: -2.216746e-18}
+      rotation: {x: 0.00027224352, y: 0.007935765, z: 0.0000021525489, w: 0.9999685}
+      scale: {x: 1.0000008, y: 1.0000026, z: 1.0000008}
+    - name: ALCINA_JULLIARD:L_Ring_01
+      parentName: ALCINA_JULLIARD:L_Hand
+      position: {x: 0.0035997932, y: -0.00014120691, z: -0.0046192077}
+      rotation: {x: 0.03960882, y: -0.8783438, z: 0.10581196, w: 0.46448597}
+      scale: {x: 0.99999976, y: 1.0000015, z: 1.0000064}
+    - name: ALCINA_JULLIARD:L_Ring_02
+      parentName: ALCINA_JULLIARD:L_Ring_01
+      position: {x: -0.0025905534, y: 0.0000000013732697, z: -0.000003322869}
+      rotation: {x: 0.0007107421, y: 0.020723991, z: -0.000006049867, w: 0.99978507}
+      scale: {x: 0.9999999, y: 1.000001, z: 1.0000005}
+    - name: ALCINA_JULLIARD:L_Ring_03
+      parentName: ALCINA_JULLIARD:L_Ring_02
+      position: {x: -0.0021888071, y: 1.179612e-16, z: -4.4389303e-18}
+      rotation: {x: -0.00024028526, y: -0.0070098415, z: 0.000005278514, w: 0.99997544}
+      scale: {x: 1.0000015, y: 1.0000015, z: 0.9999991}
+    - name: ALCINA_JULLIARD:L_Ring_04
+      parentName: ALCINA_JULLIARD:L_Ring_03
+      position: {x: -0.0020915852, y: -3.7747583e-17, z: -6.6637418e-18}
+      rotation: {x: -0.0002638046, y: -0.0076916395, z: 0.000002083857, w: 0.9999704}
+      scale: {x: 0.9999988, y: 0.9999998, z: 0.99999887}
+    - name: ALCINA_JULLIARD:L_Pinky_00
+      parentName: ALCINA_JULLIARD:L_Hand
+      position: {x: 0.0021681185, y: 0.000002990778, z: 0.00017560273}
+      rotation: {x: 0.011894864, y: -0.85321814, z: -0.0015819287, w: 0.52141625}
+      scale: {x: 0.99999833, y: 1.0000015, z: 1.0000048}
+    - name: ALCINA_JULLIARD:L_Pinky_01
+      parentName: ALCINA_JULLIARD:L_Pinky_00
+      position: {x: -0.0041582678, y: -0.0004784989, z: -0.00042879855}
+      rotation: {x: -0.0005985427, y: -0.013681456, z: 0.051754903, w: 0.998566}
+      scale: {x: 1.0000037, y: 0.9999986, z: 1.0000011}
+    - name: ALCINA_JULLIARD:L_Pinky_02
+      parentName: ALCINA_JULLIARD:L_Pinky_01
+      position: {x: -0.0027446921, y: -1.9116687e-17, z: 0.000019078429}
+      rotation: {x: 0.00062319345, y: 0.018172808, z: -0.000011352785, w: 0.9998347}
+      scale: {x: 1.0000013, y: 1.0000012, z: 1.0000005}
+    - name: ALCINA_JULLIARD:L_Pinky_03
+      parentName: ALCINA_JULLIARD:L_Pinky_02
+      position: {x: -0.0017707631, y: -5.9674546e-18, z: 3.3285427e-18}
+      rotation: {x: -0.00028704194, y: -0.008371111, z: 0.000008014696, w: 0.99996495}
+      scale: {x: 0.9999993, y: 0.99999976, z: 1.0000006}
+    - name: ALCINA_JULLIARD:L_Pinky_04
+      parentName: ALCINA_JULLIARD:L_Pinky_03
+      position: {x: -0.0016412112, y: -4.5692617e-17, z: -3.3281707e-18}
+      rotation: {x: -0.00033622773, y: -0.009802442, z: 0.0000033387657, w: 0.99995196}
+      scale: {x: 1.0000039, y: 1.0000013, z: 1.0000005}
+    - name: ALCINA_JULLIARD:R_Clav
+      parentName: ALCINA_JULLIARD:Spine_03
+      position: {x: -0.008996487, y: -0.0014269926, z: -0.0040744725}
+      rotation: {x: -0.5346484, y: 0.6018505, z: -0.412629, w: -0.42622113}
+      scale: {x: 1.0000074, y: 1.0000011, z: 1.00001}
+    - name: ALCINA_JULLIARD:R_Shoulder_Top
+      parentName: ALCINA_JULLIARD:R_Clav
+      position: {x: -0.006214996, y: 0.00014826874, z: 0.004423}
+      rotation: {x: 0.63289744, y: -0.76404285, z: -0.078943096, w: 0.097197816}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.999997}
+    - name: ALCINA_JULLIARD:R_Shoulder
+      parentName: ALCINA_JULLIARD:R_Shoulder_Top
+      position: {x: 0.0024053499, y: 0.006194132, z: 0.000045388697}
+      rotation: {x: 0.017664643, y: -0.018818354, z: 0.6989978, w: 0.7146579}
+      scale: {x: 1.0000025, y: 0.99999833, z: 0.99999934}
+    - name: ALCINA_JULLIARD:R_Elbow_Top
+      parentName: ALCINA_JULLIARD:R_Shoulder
+      position: {x: 0.017979419, y: -0.0013995295, z: -0.00056257617}
+      rotation: {x: 0.0032543042, y: 0.0482043, z: -0.04177921, w: 0.99795806}
+      scale: {x: 1.0000037, y: 0.9999999, z: 1.0000004}
+    - name: ALCINA_JULLIARD:R_Elbow
+      parentName: ALCINA_JULLIARD:R_Elbow_Top
+      position: {x: 0.0039554164, y: 2.157996e-17, z: 2.220446e-18}
+      rotation: {x: 0.001221964, y: 0.9999969, z: 0.00008398475, w: -0.0021777584}
+      scale: {x: 1.0000037, y: 0.99999964, z: 1.000007}
+    - name: ALCINA_JULLIARD:R_Wrist_top
+      parentName: ALCINA_JULLIARD:R_Elbow
+      position: {x: -0.019900493, y: -0.00023071612, z: -0.0013960825}
+      rotation: {x: -0.00000007498082, y: -0.025004962, z: -0.00000018479271, w: 0.9996874}
+      scale: {x: 1.0000058, y: 1.0000007, z: 1.0000061}
+    - name: ALCINA_JULLIARD:R_Wrist
+      parentName: ALCINA_JULLIARD:R_Wrist_top
+      position: {x: -0.002036538, y: 0.00027247277, z: -0.000082482686}
+      rotation: {x: -7.105425e-15, y: -0, z: 1.9984008e-15, w: 1}
+      scale: {x: 1.0000077, y: 1.0000013, z: 1.0000077}
+    - name: ALCINA_JULLIARD:R_Hand
+      parentName: ALCINA_JULLIARD:R_Wrist
+      position: {x: -0.0033143098, y: 0.000398141, z: 0.0001075511}
+      rotation: {x: 0.024945723, y: -0.8465123, z: 0.015413547, w: 0.531561}
+      scale: {x: 1.0000045, y: 0.9999997, z: 1.0000064}
+    - name: ALCINA_JULLIARD:R_Thumn_01
+      parentName: ALCINA_JULLIARD:R_Hand
+      position: {x: -0.0032608712, y: -0.0005030151, z: -0.0005192496}
+      rotation: {x: 0.28309557, y: 0.5672917, z: -0.13872725, w: 0.7607836}
+      scale: {x: 1.0000148, y: 0.9999831, z: 1.0000298}
+    - name: ALCINA_JULLIARD:R_Thumb_02
+      parentName: ALCINA_JULLIARD:R_Thumn_01
+      position: {x: -0.003055837, y: 0.000000039667007, z: -0.0000019641918}
+      rotation: {x: -0.0001423507, y: -0.0045314105, z: -0.000092178525, w: 0.99998975}
+      scale: {x: 1.0000076, y: 1.000002, z: 1.0000086}
+    - name: ALCINA_JULLIARD:R_Thumb_03
+      parentName: ALCINA_JULLIARD:R_Thumb_02
+      position: {x: -0.0029856686, y: -0.000002285649, z: 0.00016196202}
+      rotation: {x: 0.0011622044, y: 0.07880189, z: 0.03985657, w: 0.99609256}
+      scale: {x: 1.0000161, y: 1, z: 0.9999912}
+    - name: ALCINA_JULLIARD:R_Thumb_04
+      parentName: ALCINA_JULLIARD:R_Thumb_03
+      position: {x: -0.001886229, y: 0.00021726447, z: -0.00007022024}
+      rotation: {x: 0.058143146, y: -0.0019889518, z: 0.99830633, w: -0.000098888006}
+      scale: {x: 1.0000083, y: 1.0000051, z: 1.0000002}
+    - name: ALCINA_JULLIARD:R_Index_01
+      parentName: ALCINA_JULLIARD:R_Hand
+      position: {x: -0.000121732286, y: 0.00015518279, z: 0.0057069384}
+      rotation: {x: 0.016007964, y: 0.8567671, z: 0.01872919, w: 0.5151147}
+      scale: {x: 1.0000123, y: 0.99999875, z: 1.0000092}
+    - name: ALCINA_JULLIARD:R_Index_02
+      parentName: ALCINA_JULLIARD:R_Index_01
+      position: {x: -0.0029383963, y: 0.000000024202693, z: -0.000008362667}
+      rotation: {x: 0.0007786839, y: 0.022702055, z: 0.000048028276, w: 0.999742}
+      scale: {x: 0.9999978, y: 1.0000002, z: 0.99999607}
+    - name: ALCINA_JULLIARD:R_Index_03
+      parentName: ALCINA_JULLIARD:R_Index_02
+      position: {x: -0.0019038493, y: -0.000000023030909, z: 0.000016100714}
+      rotation: {x: -0.00087149395, y: -0.025416026, z: -0.000058531466, w: 0.99967664}
+      scale: {x: 1.0000026, y: 1.0000014, z: 1.0000024}
+    - name: ALCINA_JULLIARD:R_Index_04
+      parentName: ALCINA_JULLIARD:R_Index_03
+      position: {x: -0.0018957963, y: -0.000000011881095, z: 0.000004546544}
+      rotation: {x: 0.018172262, y: -0.0006226385, z: 0.9998347, w: -0.000036190148}
+      scale: {x: 1.0000046, y: 1.0000082, z: 1.0000072}
+    - name: ALCINA_JULLIARD:R_Middle_01
+      parentName: ALCINA_JULLIARD:R_Hand
+      position: {x: 0.0017410615, y: -0.00034001976, z: 0.0053503704}
+      rotation: {x: -0.0048510004, y: 0.84994537, z: 0.0054380246, w: 0.5268205}
+      scale: {x: 1.0000075, y: 1.0000006, z: 1.0000045}
+    - name: ALCINA_JULLIARD:R_Middle_02
+      parentName: ALCINA_JULLIARD:R_Middle_01
+      position: {x: -0.0031235898, y: 0.00024669096, z: -0.000000013681909}
+      rotation: {x: -0.00003304143, y: -0.0005774493, z: 0.001362776, w: 0.9999989}
+      scale: {x: 1.0000024, y: 0.9999996, z: 1.0000036}
+    - name: ALCINA_JULLIARD:R_Middle_03
+      parentName: ALCINA_JULLIARD:R_Middle_02
+      position: {x: -0.0022541673, y: -1.7329947e-17, z: -7.546711e-17}
+      rotation: {x: 0.0010059307, y: 0.029347764, z: 0.00004164764, w: 0.9995688}
+      scale: {x: 1.0000091, y: 1.000002, z: 1.0000123}
+    - name: ALCINA_JULLIARD:R_Middle_04
+      parentName: ALCINA_JULLIARD:R_Middle_03
+      position: {x: -0.002027362, y: -4.956105e-17, z: -2.2203414e-18}
+      rotation: {x: -0.007935347, y: 0.00027221243, z: 0.99996847, w: 0.000008124089}
+      scale: {x: 0.9999981, y: 1.0000005, z: 1.0000025}
+    - name: ALCINA_JULLIARD:R_Ring_01
+      parentName: ALCINA_JULLIARD:R_Hand
+      position: {x: 0.0032016602, y: -0.00009414841, z: 0.0042501306}
+      rotation: {x: -0.04603269, y: 0.8599382, z: 0.070685774, w: 0.50337946}
+      scale: {x: 1.0000086, y: 1.0000026, z: 1.0000058}
+    - name: ALCINA_JULLIARD:R_Ring_02
+      parentName: ALCINA_JULLIARD:R_Ring_01
+      position: {x: -0.0026760062, y: -8.54068e-11, z: -0.00000022041534}
+      rotation: {x: -0.00071073475, y: -0.02072381, z: -0.00000658631, w: 0.999785}
+      scale: {x: 1.0000057, y: 1, z: 1.000005}
+    - name: ALCINA_JULLIARD:R_Ring_03
+      parentName: ALCINA_JULLIARD:R_Ring_02
+      position: {x: -0.0022987812, y: 1.8039666e-10, z: 0.0000015422366}
+      rotation: {x: 0.00024032667, y: 0.0070099365, z: -0.000002610432, w: 0.99997544}
+      scale: {x: 1.0000024, y: 1.0000017, z: 1.0000067}
+    - name: ALCINA_JULLIARD:R_Ring_04
+      parentName: ALCINA_JULLIARD:R_Ring_03
+      position: {x: -0.0020916148, y: -8.743006e-17, z: 2.8871032e-17}
+      rotation: {x: 0.0076915715, y: -0.00026382756, z: 0.99997044, w: -0.00001065064}
+      scale: {x: 1.000002, y: 1.00001, z: 1.0000081}
+    - name: ALCINA_JULLIARD:R_Pinky_00
+      parentName: ALCINA_JULLIARD:R_Hand
+      position: {x: 0.0021681066, y: 0.0000029821692, z: -0.00017564111}
+      rotation: {x: -0.03811086, y: 0.8491105, z: -0.022726921, w: 0.5263482}
+      scale: {x: 1.0000087, y: 0.9999996, z: 1.0000043}
+    - name: ALCINA_JULLIARD:R_Pinky_01
+      parentName: ALCINA_JULLIARD:R_Pinky_00
+      position: {x: -0.0041543245, y: -0.0007754833, z: 0.000063075255}
+      rotation: {x: -0.0024634053, y: -0.009736796, z: 0.056162797, w: 0.9983711}
+      scale: {x: 1.0000027, y: 0.9999982, z: 1.000002}
+    - name: ALCINA_JULLIARD:R_Pinky_02
+      parentName: ALCINA_JULLIARD:R_Pinky_01
+      position: {x: -0.0022200455, y: 4.9682526e-17, z: -2.2112707e-18}
+      rotation: {x: -0.00062275265, y: -0.018176565, z: -0.000026225754, w: 0.99983466}
+      scale: {x: 1.0000082, y: 1.0000007, z: 1.0000112}
+    - name: ALCINA_JULLIARD:R_Pinky_03
+      parentName: ALCINA_JULLIARD:R_Pinky_02
+      position: {x: -0.0017707631, y: -1.7486004e-17, z: -6.6621155e-18}
+      rotation: {x: 0.00028714532, y: 0.008375125, z: 0.000054991102, w: 0.99996495}
+      scale: {x: 1.0000073, y: 0.99999994, z: 1.0000103}
+    - name: ALCINA_JULLIARD:R_Pinky_04
+      parentName: ALCINA_JULLIARD:R_Pinky_03
+      position: {x: -0.0016412353, y: -2.1649348e-17, z: -1.1126609e-18}
+      rotation: {x: 0.00980211, y: -0.00033639753, z: 0.9999519, w: 0.000018773058}
+      scale: {x: 0.99999756, y: 1.0000067, z: 1.000001}
+    - name: ALCINA_JULLIARD:L_connect_Pelvis
+      parentName: ALCINA_JULLIARD:Pelvis
+      position: {x: 0.0059551853, y: -0.00044046357, z: -0.0022309623}
+      rotation: {x: 0.4993321, y: -0.50066704, z: 0.4993321, w: 0.5006671}
+      scale: {x: 1.0000007, y: 1.0000008, z: 1.0000008}
+    - name: ALCINA_JULLIARD:L_Hip_Top
+      parentName: ALCINA_JULLIARD:L_connect_Pelvis
+      position: {x: -0.00362992, y: -0.000003094039, z: -0.0000038044916}
+      rotation: {x: -0.000013738869, y: 0.0041120797, z: -0.003344133, w: 0.999986}
+      scale: {x: 0.9999998, y: 1.000001, z: 1.000001}
+    - name: ALCINA_JULLIARD:L_Hip
+      parentName: ALCINA_JULLIARD:L_Hip_Top
+      position: {x: -0.006250521, y: -0.0000022064735, z: -0.0000027132762}
+      rotation: {x: 0.4955351, y: 0.50033283, z: 0.5029902, w: 0.5011117}
+      scale: {x: 1.0000033, y: 1.0000019, z: 0.9999981}
+    - name: ALCINA_JULLIARD:L_Knee_Top
+      parentName: ALCINA_JULLIARD:L_Hip
+      position: {x: -0.04526576, y: -0.0036897012, z: 0.00316769}
+      rotation: {x: -0, y: -0.000000089406946, z: -0.0193468, w: 0.99981284}
+      scale: {x: 1.000009, y: 1.0000082, z: 1.0000114}
+    - name: ALCINA_JULLIARD:L_Knee
+      parentName: ALCINA_JULLIARD:L_Knee_Top
+      position: {x: -0.0031418928, y: -0.00061692914, z: -2.5427726e-13}
+      rotation: {x: -0.99922234, y: -0.039431594, z: 0.000000058439003, w: -0.000000057220504}
+      scale: {x: 1.000003, y: 1.0000088, z: 1.0000058}
+    - name: ALCINA_JULLIARD:L_Ankle
+      parentName: ALCINA_JULLIARD:L_Knee
+      position: {x: -0.03814684, y: 0.0018665645, z: 1.2897471e-12}
+      rotation: {x: 0.8041641, y: 0.5944074, z: 0.00000005877626, w: -0.000000031404497}
+      scale: {x: 1.0000027, y: 0.9999995, z: 1.0000005}
+    - name: ALCINA_JULLIARD:L_Ball
+      parentName: ALCINA_JULLIARD:L_Ankle
+      position: {x: -0.012709824, y: -0.0017176515, z: -0.0018394735}
+      rotation: {x: -0.002065975, y: -0.10159463, z: -0.020226534, w: 0.9946181}
+      scale: {x: 1.0000011, y: 1.0000019, z: 1.0000043}
+    - name: ALCINA_JULLIARD:L_Toe
+      parentName: ALCINA_JULLIARD:L_Ball
+      position: {x: -0.004536879, y: -1.5655995e-17, z: 1.3877788e-17}
+      rotation: {x: -0.10368053, y: -0.6994644, z: -0.10368046, w: 0.6994644}
+      scale: {x: 1.0000023, y: 1.000002, z: 1.0000026}
+    - name: ALCINA_JULLIARD:R_Connect_Pelvis
+      parentName: ALCINA_JULLIARD:Pelvis
+      position: {x: 0.005955229, y: -0.00044046363, z: 0.0019227868}
+      rotation: {x: -0.4993321, y: 0.5006671, z: 0.4993321, w: 0.50066704}
+      scale: {x: 1.0000093, y: 1.0000008, z: 1.0000094}
+    - name: ALCINA_JULLIARD:R_Hip_Top
+      parentName: ALCINA_JULLIARD:R_Connect_Pelvis
+      position: {x: -0.0036295184, y: -0.000012931495, z: 0.0000035603491}
+      rotation: {x: 0.00005364418, y: -0.0038445294, z: -0.013960794, w: 0.9998952}
+      scale: {x: 1.0000075, y: 1.0000012, z: 1.0000076}
+    - name: ALCINA_JULLIARD:R_hip
+      parentName: ALCINA_JULLIARD:R_Hip_Top
+      position: {x: -0.005640988, y: 0.000019373816, z: -0.000005336312}
+      rotation: {x: -0.49032718, y: -0.5057019, z: 0.5081475, w: 0.49561182}
+      scale: {x: 1.0000103, y: 1.0000094, z: 1.0000061}
+    - name: ALCINA_JULLIARD:R_Knee_Top
+      parentName: ALCINA_JULLIARD:R_hip
+      position: {x: -0.045397233, y: -0.0037069854, z: -0.0022477934}
+      rotation: {x: -0.000000044703473, y: 0.000000089406946, z: -0.0193482, w: 0.99981284}
+      scale: {x: 1.0000021, y: 0.9999988, z: 1.0000019}
+    - name: ALCINA_JULLIARD:R_Knee
+      parentName: ALCINA_JULLIARD:R_Knee_Top
+      position: {x: -0.0031268212, y: -0.0006163015, z: -2.6888302e-14}
+      rotation: {x: -0.9992223, y: -0.03943296, z: -0.0000000032033574, w: -0.000000078018786}
+      scale: {x: 1.0000086, y: 1.0000128, z: 1.0000099}
+    - name: ALCINA_JULLIARD:R_Ankle
+      parentName: ALCINA_JULLIARD:R_Knee
+      position: {x: -0.038187154, y: 0.0018525589, z: 5.36453e-10}
+      rotation: {x: 0.8041641, y: 0.5944073, z: 0.00000014554757, w: -0.00000012215473}
+      scale: {x: 1.0000058, y: 0.99999815, z: 1.000007}
+    - name: ALCINA_JULLIARD:R_Ball
+      parentName: ALCINA_JULLIARD:R_Ankle
+      position: {x: -0.012702702, y: -0.0017248904, z: 0.0013245115}
+      rotation: {x: 0.0019622436, y: 0.09648621, z: -0.02023833, w: 0.9951266}
+      scale: {x: 1.0000032, y: 1.0000021, z: 1.0000057}
+    - name: ALCINA_JULLIARD:R_Toe
+      parentName: ALCINA_JULLIARD:R_Ball
+      position: {x: -0.004536937, y: -4.3935797e-18, z: -4.004137e-11}
+      rotation: {x: 0.6994647, y: -0.10367958, z: 0.6994644, w: 0.10367944}
+      scale: {x: 0.99999386, y: 1.0000112, z: 0.9999898}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -312,7 +1241,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
