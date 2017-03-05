@@ -44,8 +44,6 @@ public class AlcinaCrossfader : MonoBehaviour {
 	public Material[] fadeEmissionRight;
 
 	public float _ambientIntensity = 4.45f;
-	public Light _light;
-	public float _lightIntensity = 1.22f;
 
 	private Color _emissionColor;
 
@@ -75,6 +73,6 @@ public class AlcinaCrossfader : MonoBehaviour {
 		}
 
 		RenderSettings.ambientIntensity = invCrossfade * Mathf.Max(1f, _ambientIntensity);
-		_light.intensity = invCrossfade * Mathf.Max(1f, _lightIntensity);
+		RenderSettings.reflectionIntensity = invCrossfade;
 	}
 }
