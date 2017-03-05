@@ -33,10 +33,12 @@ public class OSCKnobControl : MonoBehaviour {
 
 	void Update() {
 		var data = OscMaster.GetData(_path);
-		if (data != null) {
+		if (data != null)
+		{
 			var val = (float)data[0];
 			_knob.value = val;
 		}
+		OscMaster.ClearData(_path);
 	}
 	
 	private void Listener(float newValue) {

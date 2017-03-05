@@ -30,5 +30,6 @@ public class OSCToggleControl : MonoBehaviour
 			var val = (bool)data[0];
 			_toggle.isOn = val;
 		}
+		OscMaster.ClearData(_path);
 	}
 }
