@@ -595,7 +595,7 @@ public class AvatarController : MonoBehaviour
 			}
 
 			float angleSign = !mirroredMovement /**(boneIndex == 27 || boneIndex == 29)*/ ? -1f : -1f;
-			leftFistAngle = Mathf.Lerp(leftFistAngle, leftFistClosed ? 60f : handOpenAngle, smoothFactor * Time.deltaTime);
+			leftFistAngle = Mathf.Lerp(leftFistAngle, leftFistClosed ? handCloseAngle : handOpenAngle, smoothFactor * Time.deltaTime);
 			float angleRot = angleSign * leftFistAngle;
 			TransformSpecialBoneFist(boneIndex, angleRot);
 			return;
@@ -631,7 +631,7 @@ public class AvatarController : MonoBehaviour
 			}
 
 			float angleSign = !mirroredMovement /**(boneIndex == 27 || boneIndex == 29)*/ ? -1f : -1f;
-			rightFistAngle = Mathf.Lerp(rightFistAngle, rightFistClosed ? 60f : handOpenAngle, smoothFactor * Time.deltaTime);
+			rightFistAngle = Mathf.Lerp(rightFistAngle, rightFistClosed ? handCloseAngle : handOpenAngle, smoothFactor * Time.deltaTime);
 			float angleRot = angleSign * rightFistAngle;
 			TransformSpecialBoneFist(boneIndex, angleRot);
 			return;

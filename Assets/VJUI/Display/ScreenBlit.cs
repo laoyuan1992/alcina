@@ -68,9 +68,12 @@ namespace Phantom
 
         void LateUpdate()
         {
-            _material.SetFloat("_Invert", _invert);
-            _material.SetColor("_Color", _overlayColor);
-            _material.SetFloat("_Intensity", _intensity);
-        }
+			if (_material)
+			{
+				_material.SetFloat("_Invert", _invert);
+				_material.SetColor("_Color", _overlayColor);
+				_material.SetFloat("_Intensity", _intensity);
+			}
+		}
     }
 }
