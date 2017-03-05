@@ -43,7 +43,20 @@ public class AlcinaCrossfader : MonoBehaviour {
 
 	public Material[] fadeEmissionRight;
 
-	public float _ambientIntensity = 4.45f;
+	[System.Serializable]
+	public struct LightInfo
+	{
+		public Light light;
+		[Range(0, 1)]
+		public float intensity;
+	}
+
+	public LightInfo[] lights;
+
+	[Range(0, 1)]
+	public float _ambientIntensity = 1f;
+	[Range(0, 1)]
+	public float _reflectionIntensity = 1f;
 
 	private Color _emissionColor;
 
@@ -72,7 +85,12 @@ public class AlcinaCrossfader : MonoBehaviour {
 			fadeEmissionRight[i].SetColor("_EmissionColor", Color.HSVToRGB(_emissionHue, _emissionSaturation, _emissionBrightness * _crossfade));
 		}
 
-		RenderSettings.ambientIntensity = invCrossfade * Mathf.Max(1f, _ambientIntensity);
-		RenderSettings.reflectionIntensity = invCrossfade;
+		for (int i = 0; i < lights.Length; i++)
+		{
+			lights[i].light.intensity = invCrossfade * lights[i].intensity;
+		}
+
+		RenderSettings.ambientIntensity = invCrossfade * _ambientIntensity;
+		RenderSettings.reflectionIntensity = invCrossfade * _reflectionIntensity;
 	}
 }
