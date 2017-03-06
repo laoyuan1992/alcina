@@ -6,6 +6,7 @@ public class ParticleControl : MonoBehaviour {
 
 	public Skinner.SkinnerParticle[] particles;
 	public Material mat;
+	public AlcinaCrossfader crossfader;
 
 	[SerializeField, Range(0, 1)]
 	private float _alpha;
@@ -131,6 +132,6 @@ public class ParticleControl : MonoBehaviour {
 		mat.SetFloat("_Saturation", _saturation);
 		mat.SetFloat("_EmissionProb", _sparkle);
 		mat.SetFloat("_HueShift", _hueShift);
-		mat.SetFloat("_Alpha", _alpha);
+		mat.SetFloat("_Alpha", Mathf.Min(_alpha * crossfader.crossfadeFx));
 	}
 }

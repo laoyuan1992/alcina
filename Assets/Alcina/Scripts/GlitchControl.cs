@@ -5,6 +5,7 @@ using UnityEngine;
 public class GlitchControl : MonoBehaviour {
 
 	public Material mat;
+	public AlcinaCrossfader crossfader;
 
 	[SerializeField, Range(0, 1)]
 	private float _alpha;
@@ -66,6 +67,6 @@ public class GlitchControl : MonoBehaviour {
 		mat.SetFloat("_Brightness", brightness * _brightness);
 		mat.SetFloat("_EmissionProb", _sparkle);
 		mat.SetFloat("_BrightnessOffs", brightnessOffset * _brightness);
-		mat.SetFloat("_Alpha", _alpha);
+		mat.SetFloat("_Alpha", Mathf.Min(_alpha, crossfader.crossfadeFx));
 	}
 }
