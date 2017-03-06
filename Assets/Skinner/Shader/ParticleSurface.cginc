@@ -24,6 +24,8 @@ float3 _Scale; // (speed, max, min)
 half _CutoffSpeed;
 half _SpeedToIntensity;
 
+float _Alpha;
+
 struct Input
 {
 #if defined(SKINNER_TEXTURED)
@@ -84,4 +86,5 @@ void surf(Input IN, inout SurfaceOutputStandard o)
     o.Smoothness = _Smoothness;
     o.Metallic = _Metallic;
     o.Emission = IN.color.rgb;
+	o.Alpha = _Alpha;
 }

@@ -15,6 +15,15 @@ public class AlcinaCrossfader : MonoBehaviour {
 	}
 
 	[SerializeField, Range(0, 1)]
+	private float _crossfadeFx = 0f;
+
+	public float crossfadeFx
+	{
+		get { return _crossfadeFx; }
+		set { _crossfadeFx = value; }
+	}
+
+	[SerializeField, Range(0, 1)]
 	private float _emissionHue = 0f;
 	public float emissionHue
 	{
@@ -42,6 +51,14 @@ public class AlcinaCrossfader : MonoBehaviour {
 	public Material[] fadeOpacityRight;
 
 	public Material[] fadeEmissionRight;
+	public Renderer[] enableRight;
+
+	public Material[] fadeOpacityFxLeft;
+	public Material[] fadeOpacityFxRight;
+	public Renderer[] enableFxLeft;
+
+	public Material[] fadeOpacityBothLeft;
+	public Renderer[] enableBothLeft;
 
 	[System.Serializable]
 	public struct LightInfo
@@ -69,6 +86,7 @@ public class AlcinaCrossfader : MonoBehaviour {
 	void Update()
 	{
 		float invCrossfade = Mathf.Max(0f, 1f - _crossfade);
+		float invFxCrossfade = Mathf.Max(0f, 1f - _crossfadeFx);
 
 		for (int i = 0; i < fadeOpacityLeft.Length; i++)
 		{
@@ -85,12 +103,44 @@ public class AlcinaCrossfader : MonoBehaviour {
 			fadeEmissionRight[i].SetColor("_EmissionColor", Color.HSVToRGB(_emissionHue, _emissionSaturation, _emissionBrightness * _crossfade));
 		}
 
-		for (int i = 0; i < lights.Length; i++)
+		for (int i = 0; i < enableRight.Length; i++)
 		{
-			lights[i].light.intensity = invCrossfade * lights[i].intensity;
+			enableRight[i].enabled = !(crossfade < 0.5f);
 		}
 
-		RenderSettings.ambientIntensity = invCrossfade * _ambientIntensity;
-		RenderSettings.reflectionIntensity = invCrossfade * _reflectionIntensity;
+		for (int i = 0; i < fadeOpacityFxLeft.Length; i++)
+		{
+			fadeOpacityFxLeft[i].color = new Color(1, 1, 1, invFxCrossfade);
+		}
+
+		for (int i = 0; i < fadeOpacityFxRight.Length; i++)
+		{
+			fadeOpacityFxRight[i].color = new Color(1, 1, 1, _crossfadeFx);
+		}
+
+		for (int i = 0; i < enableFxLeft.Length; i++)
+		{
+			enableFxLeft[i].enabled = (_crossfadeFx < 0.99f);
+		}
+
+		for (int i = 0; i < fadeOpacityBothLeft.Length; i++)
+		{
+			fadeOpacityBothLeft[i].color = new Color(1, 1, 1, Mathf.Min(invCrossfade, invFxCrossfade));
+		}
+
+		for (int i = 0; i < enableBothLeft.Length; i++)
+		{
+			enableBothLeft[i].enabled = (_crossfade < 0.5f) && (_crossfadeFx < 0.99f);
+		}
+
+		float fade = Mathf.Min(invFxCrossfade, invCrossfade);
+
+		RenderSettings.ambientIntensity = fade* _ambientIntensity;
+		RenderSettings.reflectionIntensity = fade * _reflectionIntensity;
+
+		for (int i = 0; i < lights.Length; i++)
+		{
+			lights[i].light.intensity = fade * lights[i].intensity;
+		}
 	}
 }

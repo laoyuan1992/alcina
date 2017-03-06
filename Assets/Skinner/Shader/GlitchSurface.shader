@@ -3,6 +3,7 @@ Shader "Skinner/Glitch"
 {
     Properties
     {
+		_Alpha("Alpha", Range(0, 1)) = 1.0
         _Albedo("Albedo", Color) = (0.5, 0.5, 0.5)
         _Smoothness("Smoothness", Range(0, 1)) = 0.5
         _Metallic("Metallic", Range(0, 1)) = 0
@@ -26,7 +27,7 @@ Shader "Skinner/Glitch"
         Tags { "RenderType"="Opaque" }
         Cull Off
         CGPROGRAM
-        #pragma surface surf Standard vertex:vert nolightmap addshadow
+        #pragma surface surf Standard vertex:vert nolightmap addshadow alpha:fade
         #pragma target 3.0
         #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
         #include "GlitchSurface.cginc"

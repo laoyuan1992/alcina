@@ -3,6 +3,7 @@ Shader "Skinner/Particle/Two-Sided, Non-Textured"
 {
     Properties
     {
+		_Alpha("Alpha", Range(0, 1)) = 1
         _Albedo("Albedo", Color) = (0.5, 0.5, 0.5)
         _Smoothness("Smoothness", Range(0, 1)) = 0.5
         _Metallic("Metallic", Range(0, 1)) = 0
@@ -45,7 +46,7 @@ Shader "Skinner/Particle/Two-Sided, Non-Textured"
 
         Cull Off
         CGPROGRAM
-        #pragma surface surf Standard vertex:vert nolightmap addshadow
+        #pragma surface surf Standard vertex:vert nolightmap addshadow alpha:fade
         #pragma target 3.0
         #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
         #define SKINNER_TWO_SIDED

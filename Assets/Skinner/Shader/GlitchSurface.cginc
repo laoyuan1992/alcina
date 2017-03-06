@@ -18,6 +18,8 @@ half _AreaThreshold;
 // Color modifier
 half _ModDuration;
 
+float _Alpha;
+
 struct Input
 {
     half3 color : COLOR;
@@ -76,4 +78,5 @@ void surf(Input IN, inout SurfaceOutputStandard o)
     o.Metallic = _Metallic;
     o.Emission = IN.color;
     o.Normal = float3(0, 0, IN.facing > 0 ? 1 : -1);
+	o.Alpha = _Alpha;
 }
