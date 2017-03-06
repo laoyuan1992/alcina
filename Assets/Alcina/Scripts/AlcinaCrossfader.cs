@@ -51,7 +51,6 @@ public class AlcinaCrossfader : MonoBehaviour {
 	public Material[] fadeOpacityRight;
 
 	public Material[] fadeEmissionRight;
-	public Renderer[] enableRight;
 
 	public Material[] fadeOpacityFxLeft;
 	public Material[] fadeOpacityFxRight;
@@ -59,6 +58,7 @@ public class AlcinaCrossfader : MonoBehaviour {
 
 	public Material[] fadeOpacityBothLeft;
 	public Renderer[] enableBothLeft;
+	public Renderer[] enableRightFxLeft;
 
 	[System.Serializable]
 	public struct LightInfo
@@ -104,11 +104,6 @@ public class AlcinaCrossfader : MonoBehaviour {
 			fadeEmissionRight[i].SetColor("_EmissionColor", Color.HSVToRGB(_emissionHue, _emissionSaturation, _emissionBrightness * emissionFade));
 		}
 
-		for (int i = 0; i < enableRight.Length; i++)
-		{
-			enableRight[i].enabled = !(crossfade < 0.5f);
-		}
-
 		for (int i = 0; i < fadeOpacityFxLeft.Length; i++)
 		{
 			fadeOpacityFxLeft[i].color = new Color(1, 1, 1, invFxCrossfade);
@@ -132,6 +127,11 @@ public class AlcinaCrossfader : MonoBehaviour {
 		for (int i = 0; i < enableBothLeft.Length; i++)
 		{
 			enableBothLeft[i].enabled = (_crossfade < 0.5f) && (_crossfadeFx < 0.99f);
+		}
+
+		for (int i = 0; i < enableRightFxLeft.Length; i++)
+		{
+			enableRightFxLeft[i].enabled = (_crossfade > 0.5f) && (_crossfadeFx < 0.99f);
 		}
 
 		float fade = Mathf.Min(invFxCrossfade, invCrossfade);
