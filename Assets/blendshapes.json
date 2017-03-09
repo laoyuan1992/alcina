@@ -1,0 +1,104 @@
+{
+    "blendshapes": [
+        {
+            "source": 0,
+            "weight": 1.593999981880188,
+            "mode": 0
+        },
+        {
+            "source": 13,
+            "weight": 1.6579999923706055,
+            "mode": 1
+        },
+        {
+            "source": 15,
+            "weight": 1.0809999704360963,
+            "mode": 0
+        },
+        {
+            "source": 5,
+            "weight": 1.3329999446868897,
+            "mode": 0
+        },
+        {
+            "source": 15,
+            "weight": 1.0,
+            "mode": 0
+        },
+        {
+            "source": 7,
+            "weight": 1.0049999952316285,
+            "mode": 0
+        },
+        {
+            "source": 14,
+            "weight": 1.6579999923706055,
+            "mode": 1
+        },
+        {
+            "source": 5,
+            "weight": 1.3329999446868897,
+            "mode": 0
+        },
+        {
+            "source": 7,
+            "weight": 0.9959999918937683,
+            "mode": 0
+        },
+        {
+            "source": 4,
+            "weight": 1.0269999504089356,
+            "mode": 0
+        },
+        {
+            "source": 2,
+            "weight": 0.0,
+            "mode": 1
+        },
+        {
+            "source": 4,
+            "weight": 1.0,
+            "mode": 0
+        },
+        {
+            "source": 9,
+            "weight": 1.0,
+            "mode": 0
+        },
+        {
+            "source": 12,
+            "weight": 2.0,
+            "mode": 0
+        },
+        {
+            "source": 1,
+            "weight": 2.0,
+            "mode": 0
+        },
+        {
+            "source": 12,
+            "weight": 2.0,
+            "mode": 0
+        },
+        {
+            "source": 14,
+            "weight": 1.7120000123977662,
+            "mode": 2
+        },
+        {
+            "source": 9,
+            "weight": 1.0,
+            "mode": 0
+        },
+        {
+            "source": 13,
+            "weight": 1.7120000123977662,
+            "mode": 2
+        },
+        {
+            "source": 2,
+            "weight": 0.0,
+            "mode": 2
+        }
+    ]
+}

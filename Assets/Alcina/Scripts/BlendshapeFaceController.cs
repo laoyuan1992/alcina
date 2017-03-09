@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlendshapeFaceController : MonoBehaviour {
 
@@ -10,6 +11,8 @@ public class BlendshapeFaceController : MonoBehaviour {
 
 	public float globalMultiplier = 100f;
 	public float smoothing = 2f;
+
+	public Text importStatus;
 
 	[System.Serializable]
 	public class BlendshapeInfo
@@ -36,6 +39,54 @@ public class BlendshapeFaceController : MonoBehaviour {
 	private FacetrackingManager manager;
 	private KinectInterop.DepthSensorPlatform platform;
 
+	internal class BlendshapesContainer
+	{
+		public BlendshapeInfo[] blendshapes;
+	}
+
+	void ImportJSON()
+	{
+		string path = Application.dataPath;
+		if (Application.platform == RuntimePlatform.OSXPlayer)
+		{
+			path += "/../../";
+		}
+		else if (Application.platform == RuntimePlatform.WindowsPlayer)
+		{
+			path += "/../";
+		}
+		else
+		{
+			path += "/";
+		}
+		path += "blendshapes.json";
+		Debug.Log("reading from " + path);
+		try
+		{
+			string json = System.IO.File.ReadAllText(path);
+			BlendshapesContainer cont = JsonUtility.FromJson<BlendshapesContainer>(json);
+			if (cont == null)
+			{
+				importStatus.text = "null json!";
+				return;
+			}
+			blendshapes = cont.blendshapes;
+			importStatus.text = "imported blendshapes.json";
+		}
+		catch (System.IO.FileNotFoundException)
+		{
+			importStatus.text = "blendshapes.json not found";
+		}
+		catch (System.IO.IOException)
+		{
+			importStatus.text = "File read error";
+		}
+		catch (System.Exception)
+		{
+			importStatus.text = "parse error";
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		KinectManager kinectManager = KinectManager.Instance;
@@ -43,6 +94,7 @@ public class BlendshapeFaceController : MonoBehaviour {
 		{
 			platform = kinectManager.GetSensorPlatform();
 		}
+		ImportJSON();
 	}
 
 	// Update is called once per frame
