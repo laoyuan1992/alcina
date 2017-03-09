@@ -114,6 +114,7 @@ public class AlcinaCrossfader : MonoBehaviour {
 		set { _progressSpeed = value; }
 	}
 
+	private float _curProgress = 0.5f;
 	private Color _emissionColor;
 
 
@@ -183,11 +184,12 @@ public class AlcinaCrossfader : MonoBehaviour {
 			lights[i].light.intensity = fade * lights[i].intensity;
 		}
 
+		_curProgress += Time.deltaTime * _progressSpeed;
 		for (int i = 0; i < progress.Length; i++)
 		{
 			ProgressInfo info = progress[i];
 			Material mat = info.material;
-			mat.SetFloat("_Progress", Time.time * _progressSpeed);
+			mat.SetFloat("_Progress", _curProgress);
 			mat.SetFloat("_ProgressCutoff", _progressCutoff * info.cutoff);
 			mat.SetFloat("_ProgressDecay", _progressDecay * info.decay);
 			mat.SetFloat("_ProgressLow", info.low);

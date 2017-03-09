@@ -56,6 +56,7 @@
 		SubShader{
 			Tags { "RenderType" = "Transparent" }
 			LOD 200
+			ZTest On
 
 			CGPROGRAM
 			// Physically based Standard lighting model, and enable shadows on all light types
