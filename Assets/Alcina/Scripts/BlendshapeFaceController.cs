@@ -46,6 +46,8 @@ public class BlendshapeFaceController : MonoBehaviour {
 
 	void ImportJSON()
 	{
+		if (importStatus == null)
+			return;
 		string path = Application.dataPath;
 		if (Application.platform == RuntimePlatform.OSXPlayer)
 		{
@@ -60,7 +62,7 @@ public class BlendshapeFaceController : MonoBehaviour {
 			path += "/";
 		}
 		path += "blendshapes.json";
-		Debug.Log("reading from " + path);
+		importStatus.text = "reading json";
 		try
 		{
 			string json = System.IO.File.ReadAllText(path);
@@ -100,6 +102,11 @@ public class BlendshapeFaceController : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.B))
+		{
+			ImportJSON();
+		}
+
 		if (head == null)
 		{
 			return;
