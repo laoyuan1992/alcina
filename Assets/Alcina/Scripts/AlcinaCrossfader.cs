@@ -114,6 +114,10 @@ public class AlcinaCrossfader : MonoBehaviour {
 		set { _progressSpeed = value; }
 	}
 
+	public float _brightnessBump = 0.04f;
+
+	public Phantom.ScreenBlit[] blits;
+
 	private float _curProgress = 0.5f;
 	private Color _emissionColor;
 
@@ -194,6 +198,11 @@ public class AlcinaCrossfader : MonoBehaviour {
 			mat.SetFloat("_ProgressDecay", _progressDecay * info.decay);
 			mat.SetFloat("_ProgressLow", info.low);
 			mat.SetFloat("_ProgressHigh", info.high);
+		}
+
+		for (int i = 0; i < blits.Length; i++)
+		{
+			blits[i].brightness = Mathf.Min(invCrossfade, invFxCrossfade) * _brightnessBump;
 		}
 	}
 }

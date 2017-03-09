@@ -15,10 +15,15 @@
     fixed _Invert;
     fixed4 _Color;
     fixed _Intensity;
+	fixed _Brightness;
 
     fixed4 frag(v2f_img i) : SV_Target
     {
         fixed4 c = saturate(tex2D(_MainTex, i.uv));
+		if (c.a > 0.001)
+		{
+			c.rgb += fixed3(_Brightness, _Brightness, _Brightness);
+		}
 
         fixed3 rgb = LinearToGammaSpace(c);
 

@@ -24,10 +24,20 @@ namespace Phantom
 
         [SerializeField, Range(0, 1)] float _intensity = 1;
 
-        public float intensity {
-            get { return _intensity; }
-            set { _intensity = value; }
-        }
+        public float intensity
+		{
+			get { return _intensity; }
+			set { _intensity = value; }
+		}
+
+		[SerializeField, Range(0, 1)]
+		float _brightness = 0;
+		public float brightness
+		{
+			get { return _brightness; }
+			set { _brightness = value; }
+		}
+
 
 		[SerializeField] Shader _shader;
 
@@ -73,6 +83,7 @@ namespace Phantom
 				_material.SetFloat("_Invert", _invert);
 				_material.SetColor("_Color", _overlayColor);
 				_material.SetFloat("_Intensity", _intensity);
+				_material.SetFloat("_Brightness", _brightness);
 			}
 		}
     }
