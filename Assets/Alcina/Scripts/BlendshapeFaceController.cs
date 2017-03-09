@@ -16,7 +16,7 @@ public class BlendshapeFaceController : MonoBehaviour {
 	{
 		[SerializeField]
 		public KinectInterop.FaceShapeAnimations source;
-		[SerializeField, Range(0, 2)]
+		[SerializeField, Range(0, 4)]
 		public float weight = 1f;
 		[SerializeField]
 		public BlendshapeMode mode;
