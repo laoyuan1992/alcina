@@ -75,6 +75,45 @@ public class AlcinaCrossfader : MonoBehaviour {
 	[Range(0, 1)]
 	public float _reflectionIntensity = 1f;
 
+	[System.Serializable]
+	public struct ProgressInfo
+	{
+		public Material material;
+		[Range(0, 1)]
+		public float low;
+		[Range(0, 1)]
+		public float high;
+		[Range(0, 1)]
+		public float cutoff;
+		[Range(0, 4)]
+		public float decay;
+	}
+	public ProgressInfo[] progress;
+
+	[SerializeField, Range(0, 1)]
+	private float _progressCutoff;
+	public float progressCutoff
+	{
+		get { return _progressCutoff; }
+		set { _progressCutoff = value; }
+	}
+
+	[SerializeField, Range(0, 1)]
+	private float _progressDecay;
+	public float progressDecay
+	{
+		get { return _progressDecay; }
+		set { _progressDecay = value; }
+	}
+
+	[SerializeField, Range(0, 1)]
+	private float _progressSpeed;
+	public float progressSpeed
+	{
+		get { return _progressSpeed; }
+		set { _progressSpeed = value; }
+	}
+
 	private Color _emissionColor;
 
 
@@ -136,12 +175,23 @@ public class AlcinaCrossfader : MonoBehaviour {
 
 		float fade = Mathf.Min(invFxCrossfade, invCrossfade);
 
-		RenderSettings.ambientIntensity = fade* _ambientIntensity;
+		RenderSettings.ambientIntensity = fade * _ambientIntensity;
 		RenderSettings.reflectionIntensity = fade * _reflectionIntensity;
 
 		for (int i = 0; i < lights.Length; i++)
 		{
 			lights[i].light.intensity = fade * lights[i].intensity;
+		}
+
+		for (int i = 0; i < progress.Length; i++)
+		{
+			ProgressInfo info = progress[i];
+			Material mat = info.material;
+			mat.SetFloat("_Progress", Time.time * _progressSpeed);
+			mat.SetFloat("_ProgressCutoff", _progressCutoff * info.cutoff);
+			mat.SetFloat("_ProgressDecay", _progressDecay * info.decay);
+			mat.SetFloat("_ProgressLow", info.low);
+			mat.SetFloat("_ProgressHigh", info.high);
 		}
 	}
 }
