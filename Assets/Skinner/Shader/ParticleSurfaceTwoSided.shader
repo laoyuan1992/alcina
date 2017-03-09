@@ -44,7 +44,7 @@ Shader "Skinner/Particle/Two-Sided, Non-Textured"
             ENDCG
         }
 
-        Cull Off
+        Cull Off ZTest Always
         CGPROGRAM
         #pragma surface surf Standard vertex:vert nolightmap addshadow alpha:fade
         #pragma target 3.0

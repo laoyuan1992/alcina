@@ -25,7 +25,7 @@ Shader "Skinner/Glitch"
     SubShader
     {
         Tags { "RenderType"="Opaque" }
-        Cull Off
+        Cull Off ZTest Always
         CGPROGRAM
         #pragma surface surf Standard vertex:vert nolightmap addshadow alpha:fade
         #pragma target 3.0
