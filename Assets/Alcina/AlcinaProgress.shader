@@ -97,7 +97,7 @@
 			fixed4 e = tex2D(_EmissionMap, IN.uv_EmissionMap) * _EmissionColor;
 
 			fixed progress = tex2D(_ProgressTex, IN.uv_ProgressTex).r;
-			progress = progress * (_ProgressHigh - _ProgressLow) + _ProgressLow;
+			progress = (progress + _ProgressCutoff) * (_ProgressHigh - _ProgressLow) + _ProgressLow;
 			fixed cur = fmod(fmod(progress - _Progress, _ProgressCutoff) + 1.0, 1.0);
 
 			fixed eScale = _ProgressBase;
