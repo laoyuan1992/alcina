@@ -38,6 +38,13 @@ namespace Phantom
 			set { _brightness = value; }
 		}
 
+		[SerializeField, Range(0, 5)]
+		float _softness = 1;
+		public float softness
+		{
+			get { return _softness; }
+			set { _softness = value; }
+		}
 
 		[SerializeField] Shader _shader;
 
@@ -84,6 +91,7 @@ namespace Phantom
 				_material.SetColor("_Color", _overlayColor);
 				_material.SetFloat("_Intensity", _intensity);
 				_material.SetFloat("_Brightness", _brightness);
+				_material.SetFloat("_Softness", _softness);
 			}
 		}
     }

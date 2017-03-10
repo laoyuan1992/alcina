@@ -114,7 +114,21 @@ public class AlcinaCrossfader : MonoBehaviour {
 		set { _progressSpeed = value; }
 	}
 
-	public float _brightnessBump = 0.04f;
+	[SerializeField, Range(0, 0.3f)]
+	private float _brightnessBump = 0.04f;
+	public float brightnessBump
+	{
+		get { return _brightnessBump; }
+		set { _brightnessBump = value; }
+	}
+
+	[SerializeField, Range(0, 10)]
+	private float _softness = 1f;
+	public float softness
+	{
+		get { return _softness; }
+		set { _softness = value; }
+	}
 
 	public Phantom.ScreenBlit[] blits;
 
@@ -203,6 +217,7 @@ public class AlcinaCrossfader : MonoBehaviour {
 		for (int i = 0; i < blits.Length; i++)
 		{
 			blits[i].brightness = Mathf.Min(invCrossfade, invFxCrossfade) * _brightnessBump;
+			blits[i].softness = _softness;
 		}
 	}
 }
