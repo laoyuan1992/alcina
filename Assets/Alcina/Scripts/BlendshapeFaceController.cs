@@ -44,7 +44,7 @@ public class BlendshapeFaceController : MonoBehaviour {
 		public BlendshapeInfo[] blendshapes;
 	}
 
-	void ImportJSON()
+	public void ImportJSON()
 	{
 		if (importStatus == null)
 			return;
@@ -89,6 +89,26 @@ public class BlendshapeFaceController : MonoBehaviour {
 		}
 	}
 
+	public void ResetFace()
+	{
+		for (int i = 0; i < blendshapes.Length; i++)
+		{
+			head.SetBlendShapeWeight(i, 0f);
+		}
+	}
+
+	public void ResetEyes()
+	{
+		for (int i = 0; i < blendshapes.Length; i++)
+		{
+			if (blendshapes[i].source == KinectInterop.FaceShapeAnimations.LefteyeClosed ||
+				blendshapes[i].source == KinectInterop.FaceShapeAnimations.RighteyeClosed)
+			{
+				head.SetBlendShapeWeight(i, 0f);
+			}
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		KinectManager kinectManager = KinectManager.Instance;
@@ -105,6 +125,14 @@ public class BlendshapeFaceController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.B))
 		{
 			ImportJSON();
+		}
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			ResetFace();
+		}
+		if (Input.GetKeyDown(KeyCode.I))
+		{
+			ResetEyes();
 		}
 
 		if (head == null)
@@ -123,6 +151,9 @@ public class BlendshapeFaceController : MonoBehaviour {
 			for (int i = 0; i < blendshapes.Length; i++)
 			{
 				BlendshapeInfo blend = blendshapes[i];
+
+				if (!manager.IsGotAU())
+					return;
 
 				float value = manager.GetAnimUnit(blend.source);
 				if (blend.mode == BlendshapeInfo.BlendshapeMode.Positive)

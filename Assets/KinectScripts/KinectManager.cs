@@ -100,6 +100,8 @@ public class KinectManager : MonoBehaviour
 
 	[Tooltip("List of the controlled avatars in the scene. If the list is empty, the available avatar controllers will be detected at start up.")]
 	public List<AvatarController> avatarControllers = new List<AvatarController>();
+
+	public List<BlendshapeFaceController> faceControllers = new List<BlendshapeFaceController>();
 	
 	[Tooltip("Calibration pose required to turn on the tracking of respective player.")]
 	public KinectGestures.Gestures playerCalibrationPose;
@@ -2153,17 +2155,31 @@ public class KinectManager : MonoBehaviour
 		}
 
 		// try to automatically use the available avatar controllers in the scene
-		if(avatarControllers.Count == 0)
+		if (avatarControllers.Count == 0)
 		{
 			MonoBehaviour[] monoScripts = FindObjectsOfType(typeof(MonoBehaviour)) as MonoBehaviour[];
 
-			foreach(MonoBehaviour monoScript in monoScripts)
+			foreach (MonoBehaviour monoScript in monoScripts)
 			{
-//				if(typeof(AvatarController).IsAssignableFrom(monoScript.GetType()) && monoScript.enabled)
-				if((monoScript is AvatarController) && monoScript.enabled)
+				//				if(typeof(AvatarController).IsAssignableFrom(monoScript.GetType()) && monoScript.enabled)
+				if ((monoScript is AvatarController) && monoScript.enabled)
 				{
 					AvatarController avatar = (AvatarController)monoScript;
 					avatarControllers.Add(avatar);
+				}
+			}
+		}
+
+		if (faceControllers.Count == 0)
+		{
+			MonoBehaviour[] monoScripts = FindObjectsOfType(typeof(MonoBehaviour)) as MonoBehaviour[];
+
+			foreach (MonoBehaviour monoScript in monoScripts)
+			{
+				if ((monoScript is BlendshapeFaceController) && monoScript.enabled)
+				{
+					BlendshapeFaceController face = (BlendshapeFaceController)monoScript;
+					faceControllers.Add(face);
 				}
 			}
 		}
@@ -3518,16 +3534,22 @@ public class KinectManager : MonoBehaviour
 		Debug.Log("Removing user " + uidIndex + ", ID: " + userId + ", Body: " + dictUserIdToIndex[userId]);
 
 		// reset the respective avatar controllers
-		for(int i = 0; i < avatarControllers.Count; i++)
+		for (int i = 0; i < avatarControllers.Count; i++)
 		{
 			AvatarController avatar = avatarControllers[i];
 
 			//if(avatar && avatar.playerIndex >= uidIndex && avatar.playerIndex < alUserIds.Count)
-			if(avatar && avatar.playerId == userId)
+			if (avatar && avatar.playerId == userId)
 			{
 				avatar.ResetToInitialPosition();
 				avatar.playerId = 0;
 			}
+		}
+
+		for (int i = 0; i < faceControllers.Count; i++)
+		{
+			BlendshapeFaceController face = faceControllers[i];
+			face.ResetFace();
 		}
 
 		// notify all gesture listeners for losing this user

@@ -4,19 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using OscJack;
 
-public class OSCToggleControl : MonoBehaviour
-{
+public class OSCButtonControl : MonoBehaviour {
+
 	[SerializeField]
 	string _path = "path";
 
 	[SerializeField]
 	Text _label;
 
-	private VJUI.Toggle _toggle;
+	private VJUI.Button _button;
 
+	// Use this for initialization
 	void Start()
 	{
-		_toggle = GetComponent<VJUI.Toggle>();
+		_button = GetComponent<VJUI.Button>();
 	}
 
 #if UNITY_EDITOR
@@ -27,14 +28,11 @@ public class OSCToggleControl : MonoBehaviour
 #endif
 
 	// Update is called once per frame
-	void Update()
-	{
-		var data = OscMaster.GetData(_path);
-		if (data != null)
+	void Update () {
+		if (OscMaster.HasData(_path))
 		{
-			var val = (bool)data[0];
-			_toggle.isOn = val;
+			_button.onButtonDown.Invoke();
+			OscMaster.ClearData(_path);
 		}
-		OscMaster.ClearData(_path);
 	}
 }
