@@ -160,6 +160,7 @@ public class AlcinaCrossfader : MonoBehaviour {
 		for (int i = 0; i < fadeEmissionRight.Length; i++)
 		{
 			fadeEmissionRight[i].SetColor("_EmissionColor", Color.HSVToRGB(_emissionHue, _emissionSaturation, _emissionBrightness * emissionFade));
+			fadeEmissionRight[i].SetFloat("_EmissionAlpha", _crossfade);
 		}
 
 		for (int i = 0; i < fadeOpacityFxLeft.Length; i++)
