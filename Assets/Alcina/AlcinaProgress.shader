@@ -120,7 +120,7 @@
 				o.Alpha = (1 - _EmissionAlpha) + max(o.Emission.r, max(o.Emission.g, o.Emission.b));
 			}
 			else {
-				o.Alpha = saturate(c.a * (saturate(1 - _EmissionAlpha + saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b))))));
+				o.Alpha = saturate(c.a * ((1 - _EmissionAlpha + saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b))))));
 			}
 		}
 		ENDCG
