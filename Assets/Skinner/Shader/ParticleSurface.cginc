@@ -64,6 +64,9 @@ void vert(inout appdata_full data)
 
 void surf(Input IN, inout SurfaceOutputStandard o)
 {
+	if (_Alpha < 0.004) {
+		discard;
+	}
 #if defined(SKINNER_TEXTURED)
     o.Albedo = tex2D(_AlbedoMap, IN.uv_AlbedoMap).rgb * _Albedo;
 #else

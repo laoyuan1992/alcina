@@ -57,6 +57,7 @@
 			Tags { "RenderType" = "Transparent" }
 			LOD 200
 			ZTest On
+			ZWrite On
 
 			CGPROGRAM
 			// Physically based Standard lighting model, and enable shadows on all light types

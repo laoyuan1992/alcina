@@ -24,10 +24,11 @@ Shader "Skinner/Glitch"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
-        Cull Off ZTest Always
-        CGPROGRAM
-        #pragma surface surf Standard vertex:vert nolightmap addshadow alpha:fade
+		Tags{ "RenderType" = "Transparent" Queue = Transparent }
+		Cull Off ZTest Always
+		Blend SrcAlpha OneMinusSrcAlpha
+		CGPROGRAM
+        #pragma surface surf Standard vertex:vert nolightmap addshadow keepalpha
         #pragma target 3.0
         #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
         #include "GlitchSurface.cginc"

@@ -30,7 +30,7 @@ Shader "Skinner/Particle/Two-Sided, Non-Textured"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+		Tags{ "RenderType" = "Transparent" Queue = Transparent }
 
         Pass
         {
@@ -44,9 +44,10 @@ Shader "Skinner/Particle/Two-Sided, Non-Textured"
             ENDCG
         }
 
-        Cull Off ZTest Always
+		Blend SrcAlpha OneMinusSrcAlpha
+		Cull Off ZTest Always
         CGPROGRAM
-        #pragma surface surf Standard vertex:vert nolightmap addshadow alpha:fade
+        #pragma surface surf Standard vertex:vert nolightmap addshadow keepalpha 
         #pragma target 3.0
         #pragma multi_compile __ UNITY_COLORSPACE_GAMMA
         #define SKINNER_TWO_SIDED
