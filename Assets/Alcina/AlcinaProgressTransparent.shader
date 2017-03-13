@@ -43,7 +43,10 @@
 		_ProgressAmplitude("Progress Amplitude", Range(0.0, 1.0)) = 1.0
 		_ProgressDecay("Progress Decay", Range(0.0, 10.0)) = 1.0
 
-	[Enum(UV0,0,UV1,1)] _UVSec("UV Set for secondary textures", Float) = 0
+		_EmissionAlpha("Emission Alpha", Range(0, 1)) = 0.0
+		[ToggleOff] _EmissionBypass("Emission Bypass", Float) = 0.0
+		
+		[Enum(UV0,0,UV1,1)] _UVSec("UV Set for secondary textures", Float) = 0
 
 
 			// Blending state
@@ -97,6 +100,9 @@
 		float _ProgressAmplitude;
 		float _ProgressDecay;
 
+		float _EmissionAlpha;
+		float _EmissionBypass;
+
 		void surf(Input IN, inout SurfaceOutputStandard o) {
 			// Albedo comes from a texture tinted by color
 			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
@@ -105,7 +111,7 @@
 			fixed4 e = tex2D(_EmissionMap, IN.uv_EmissionMap) * _EmissionColor;
 
 			fixed progress = tex2D(_ProgressTex, IN.uv_ProgressTex).r;
-			progress = progress * (_ProgressHigh - _ProgressLow) + _ProgressLow;
+			progress = (progress + _ProgressCutoff) * (_ProgressHigh - _ProgressLow) + _ProgressLow;
 			fixed cur = fmod(fmod(progress - _Progress, _ProgressCutoff) + 1.0, 1.0);
 
 			fixed eScale = _ProgressBase;
@@ -118,7 +124,12 @@
 			// Metallic and smoothness come from slider variables
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness * tex2D(_MetallicGlossMap, IN.uv_MetallicGlossMap).a * _GlossMapScale;
-			o.Alpha = c.a;
+			if (_EmissionBypass > 0.5) {
+				o.Alpha = (1 - _EmissionAlpha) + max(o.Emission.r, max(o.Emission.g, o.Emission.b)) / 2;
+			}
+			else {
+				o.Alpha = saturate(c.a * saturate(1 - _EmissionAlpha + saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b))))) / 2;
+			}
 		}
 		ENDCG
 	}

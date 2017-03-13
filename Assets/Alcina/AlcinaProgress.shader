@@ -117,12 +117,10 @@
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness * tex2D(_MetallicGlossMap, IN.uv_MetallicGlossMap).a * _GlossMapScale;
 			if (_EmissionBypass > 0.5) {
-				//o.Alpha = saturate(c.a * saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b))));
-				//o.Alpha = 0.5;
 				o.Alpha = (1 - _EmissionAlpha) + max(o.Emission.r, max(o.Emission.g, o.Emission.b));
 			}
 			else {
-				o.Alpha = saturate(c.a * saturate(1 - _EmissionAlpha + saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b)))));
+				o.Alpha = saturate(c.a * (saturate(1 - _EmissionAlpha + saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b))))));
 			}
 		}
 		ENDCG
