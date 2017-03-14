@@ -73,13 +73,13 @@ void vert(inout appdata_full data)
 
 void surf(Input IN, inout SurfaceOutputStandard o)
 {
-	if (_Alpha < 0.004) {
-		discard;
-	}
 	o.Albedo = _Albedo;
     o.Smoothness = _Smoothness;
     o.Metallic = _Metallic;
     o.Emission = IN.color;
     o.Normal = float3(0, 0, IN.facing > 0 ? 1 : -1);
-	o.Alpha = _Alpha;
+	o.Alpha = _Alpha * max(IN.color.r, max(IN.color.g, IN.color.b));
+	if (_Alpha < 0.004) {
+		discard;
+	}
 }

@@ -27,6 +27,7 @@
 
 	_EmissionColor("Color", Color) = (0,0,0)
 		_EmissionMap("Emission", 2D) = "white" {}
+	_EmissionScale("Emission Scale", Float) = 1.0
 
 	_DetailMask("Detail Mask", 2D) = "white" {}
 
@@ -83,6 +84,8 @@
 		half _Metallic;
 		fixed4 _Color;
 
+		float _EmissionScale;
+
 		sampler2D _ProgressTex;
 		float _ProgressLow;
 		float _ProgressHigh;
@@ -100,7 +103,8 @@
 			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo = c.rgb;
 			o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
-			fixed4 e = tex2D(_EmissionMap, IN.uv_EmissionMap) * _EmissionColor;
+			float etex = tex2D(_EmissionMap, IN.uv_EmissionMap).r;
+			//fixed4 e = tex2D(_EmissionMap, IN.uv_EmissionMap) * _EmissionColor * _EmissionScale;
 
 			fixed progress = tex2D(_ProgressTex, IN.uv_ProgressTex).r;
 			progress = (progress + _ProgressCutoff) * (_ProgressHigh - _ProgressLow) + _ProgressLow;
@@ -108,20 +112,23 @@
 
 			fixed eScale = _ProgressBase;
 			eScale += _ProgressAmplitude * saturate(1.0 - (1.0 - cur) * _ProgressDecay);
+			etex *= eScale * 2;
 
-			o.Emission = e.rgb * eScale;
+			o.Emission = max(etex * _EmissionScale, 0.5 * _EmissionAlpha) * _EmissionColor * _EmissionAlpha;
+			
 			//o.Emission = tex2D(_ProgressTex, IN.uv_ProgressTex);
 			half occ = tex2D(_OcclusionMap, IN.uv_MainTex).r * _OcclusionStrength;
 			o.Occlusion = occ;
 			// Metallic and smoothness come from slider variables
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness * tex2D(_MetallicGlossMap, IN.uv_MetallicGlossMap).a * _GlossMapScale;
-			if (_EmissionBypass > 0.5) {
-				o.Alpha = (1 - _EmissionAlpha) + max(o.Emission.r, max(o.Emission.g, o.Emission.b));
-			}
-			else {
-				o.Alpha = saturate(c.a * ((1 - _EmissionAlpha + saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b))))));
-			}
+			//if (_EmissionBypass > 0.5) {
+			//	o.Alpha = (1 - _EmissionAlpha) + max(o.Emission.r, max(o.Emission.g, o.Emission.b));
+			//}
+			//else {
+			//	o.Alpha = saturate(c.a * ((1 - _EmissionAlpha + saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b))))));
+			//}
+			o.Alpha = lerp(1.0, etex * saturate(_EmissionScale), _EmissionAlpha) / 2 * _Color.a;
 		}
 		ENDCG
 	}
