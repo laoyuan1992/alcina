@@ -114,7 +114,7 @@
 			eScale += _ProgressAmplitude * saturate(1.0 - (1.0 - cur) * _ProgressDecay);
 			etex *= eScale * 2;
 
-			o.Emission = max(etex * _EmissionScale, 0.5 * _EmissionAlpha) * _EmissionColor * _EmissionAlpha;
+			o.Emission = max(etex * _EmissionScale / 2, 0.1 * _EmissionAlpha) * _EmissionColor * _EmissionAlpha;
 			
 			//o.Emission = tex2D(_ProgressTex, IN.uv_ProgressTex);
 			half occ = tex2D(_OcclusionMap, IN.uv_MainTex).r * _OcclusionStrength;
@@ -128,7 +128,7 @@
 			//else {
 			//	o.Alpha = saturate(c.a * ((1 - _EmissionAlpha + saturate(max(o.Emission.r, max(o.Emission.g, o.Emission.b))))));
 			//}
-			o.Alpha = lerp(1.0, etex * saturate(_EmissionScale), _EmissionAlpha) / 2 * _Color.a;
+			o.Alpha = lerp(1.0, etex * saturate(_EmissionScale), _EmissionAlpha) * _Color.a;
 		}
 		ENDCG
 	}
